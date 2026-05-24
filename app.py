@@ -22,8 +22,8 @@ st.markdown("Analyses sentiment and discovers topics using DistilBERT + LDA")
 @st.cache_resource
 def load_models():
     # Sentiment model
-    tokenizer = AutoTokenizer.from_pretrained("model/distilbert-sentiment")
-    model = AutoModelForSequenceClassification.from_pretrained("model/distilbert-sentiment")
+    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+    model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased", num_labels=2)
     model.eval()
 
     # Topic model
