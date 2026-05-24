@@ -27,3 +27,27 @@ An end-to-end NLP project combining sentiment analysis and topic modelling on mo
 - **App:** Streamlit
 
 ## Project structure
+day1.ipynb  → Environment setup + data loading
+day2.ipynb  → Exploratory data analysis (5 charts)
+day3.ipynb  → Text preprocessing + baseline models
+day4.ipynb  → DistilBERT fine-tuning
+day5.ipynb  → LDA topic modelling
+app.py      → Streamlit web app
+## Key findings
+- DistilBERT achieves 88.9% accuracy vs 79.2% TF-IDF baseline
+- Drama/Romance reviews are most positive (65.1%)
+- Bad Comedy reviews are least positive (34.3%)
+- Trained on Apple MPS GPU in under 4 minutes
+
+## Run locally
+```bash
+git clone https://github.com/purpleowl09/sentiment-analysis-nlp
+cd sentiment-analysis-nlp
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Author
+Keerthi Girish — Built as an NLP internship portfolio project
